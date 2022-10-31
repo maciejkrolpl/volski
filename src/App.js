@@ -1,6 +1,8 @@
 import React from "react";
 import SongList from "./SongList";
 import SongLyrics from "./SongLyrics";
+import Header from "./Header";
+import Footer from "./Footer";
 import { getLyricsFromRemote } from "./utils";
 
 class App extends React.Component {
@@ -23,14 +25,10 @@ class App extends React.Component {
     render() {
         return (
             <>
-                <div className="header">
-                    <div className="flex-cont">
-                        <div>Volski</div>
-                        <div>lyrics</div>
-                    </div>
-                </div>
+                <Header />
                 <SongList onSelectSong={this.handleSelectSong} />
                 <SongLyrics lyrics={this.state.lyrics} />
+                <Footer />
             </>
         )
     }

@@ -1,10 +1,8 @@
 import React from "react"
 
 class SongList extends React.Component {
-    klik(event) {
-        const target = event.target
-        // hightlightSelected(target);
-        const title = target.innerHTML
+    handleSongClick(event) {
+        const title = event.target.innerHTML
         this.props.onSelectSong(title)
     }
 
@@ -27,7 +25,7 @@ class SongList extends React.Component {
             'Try čarapachi',
             'Vorahi narodu',
         ].map((song) => (
-            <li key={song} onClick={(e) => this.klik(e)}>
+            <li key={song} onClick={(e) => this.handleSongClick(e)}>
                 <span className="song-title">{song}</span>
             </li>
         ))
