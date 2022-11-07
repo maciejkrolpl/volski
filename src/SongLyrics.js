@@ -1,15 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
-class SongLyrics extends React.Component {
-    componentDidUpdate() {
+export default function SongLyrics({ lyrics }) {
+    useEffect(() => {
         const element = document.querySelector('.song-lyrics')
         element.scrollIntoView({
             behavior: 'smooth',
         })
-    }
-    render() {
-        return <div className="song-lyrics">{this.props.lyrics}</div>
-    }
-}
+    })
 
-export default SongLyrics;
+    return <div className="song-lyrics">{lyrics}</div>
+}

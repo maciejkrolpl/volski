@@ -1,22 +1,47 @@
+html{
+    min-height:100%;
+    position:relative;
+}
+
 body {
+    background-color: var(--background);
+    margin: 0;
+    height:100%;
+}
+
+:root {
+    --background:rgb(234, 245, 254); 
+    --header-border: #c9c9c9;
+    --header-background: #fff;
+    --button-color: #0176d3;
+    --foot-color: #999;
+    --lyrics-color: black;
+}
+
+[data-theme="dark"] {
+    --background: rgb(19, 32, 32);
+    --header-border: #cfcfcf;
+    --header-background: #000;
+    --button-color: #b6d8f3;
+    --foot-color: #555;
+    --lyrics-color: #999;
+}
+
+.main-app {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgb(234, 245, 254);
     padding: 0;
     margin: 0;
     font-size: 16px;
 }
 
-.root {
-    margin: 0.25rem;
-}
-
 .header {
-    border: 1px solid #c9c9c9;
+    border: 1px solid var(--header-border);
     border-radius: 0.25rem;
-    background-color: #fff;
+    background-color: var(--header-background);
     padding: 0.75rem;
     font-weight: bold;
     margin: 0.25rem 0.25rem 1rem;
+    color: var(--button-color);
 }
 
 .flex-cont {
@@ -36,6 +61,9 @@ ul {
 
 .song-lyrics {
     white-space: pre;
+    color: var(--lyrics-color);
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
 }
 
 .song-title {
@@ -45,26 +73,30 @@ ul {
     border-radius: 0.25rem;
     text-decoration: none;
     justify-content: center;
-    color: #0176d3;
+    color: var(--button-color);
     padding: 0.35rem;
     padding: 0.35rem;
     margin-top: 0.15rem;
     margin-bottom: 0.15rem;
     margin-left: 15%;
     margin-right: 15%;
+}
+
+.cursor-hand {
     cursor: pointer;
 }
 
-.song-title-selected {
-    color: #000;
-    background-color: #fff;
-}
-
 .foot {
-    border-top: 1px solid #0176d3;
+    display: flex;
+    border-top: 1px solid var(--button-color);
     margin-top: 3rem;
     font-size: 0.75rem;
-    color: #999;
+    color: var(--foot-color);
+    justify-content: space-between;
+}
+
+.foot-right {
+    margin: 0.25rem;
 }
 
 

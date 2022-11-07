@@ -1,4 +1,4 @@
-function Header() {
+export default function Header() {
     return (
         <div className="header">
             <div className="flex-cont">
@@ -8,5 +8,3 @@ function Header() {
         </div>
     )
 }
-
-export default Header;

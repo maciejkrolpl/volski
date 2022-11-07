@@ -1,4 +1,4 @@
-const getLyricsFromRemote = (url) => new Promise((resolve, reject) => {
+export const getLyricsFromRemote = (url) => new Promise((resolve, reject) => {
     const x = new XMLHttpRequest()
 
     x.onload = () => {
@@ -13,6 +13,3 @@ const getLyricsFromRemote = (url) => new Promise((resolve, reject) => {
     x.open('GET', url)
     x.send()
 })
-
-
-export { getLyricsFromRemote };
