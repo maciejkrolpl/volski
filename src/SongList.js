@@ -8,6 +8,7 @@ export default function SongList(props) {
 
     const songList = [
         'A chto tam idzie',
+		'Byvaj',
         'Čužy',
         'Łamaj scenar',
         'Hieroi našaj ziamli',
