@@ -10,6 +10,7 @@ export default function SongList(props) {
         'A chto tam idzie',
 		'Byvaj',
         'Čužy',
+		'Dzie kvietki?',
         'Łamaj scenar',
         'Hieroi našaj ziamli',
         'Krainy niama',
